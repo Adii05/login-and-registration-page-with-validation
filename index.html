@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Login And Registration Form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <script>
+       function validateform()
+        {
+            var username=document.myform.username.value;
+            var password=document.myform.password.value;
+            
+            if(username=="Aditya")
+                {
+                   if(password=="123456") 
+                       {
+                           alert("login successful");
+                       }
+                    else
+                    {
+                      alert("incorrect username or password");  
+                    }
+                }
+            else 
+                {
+                    alert(" incorrect username or password");
+                }
+        }
+        
+    
+        function validation()
+        {
+           
+            var username=document.getElementById("username");
+            var password=document.getElementById("password");
+            var emailid=document.getElementById("emailid");
+             if(username.value.length <= 0)
+                 {
+                     alert("Name is reguired");
+                     username.focus();
+                     return false;
+                 }
+            
+            if(password.value.length <= 0)
+                 {
+                     alert("password is reguired");
+                     password.focus();
+                     return false;
+                 }
+            if(emailid.value.length <= 0)
+                 {
+                     alert("emailid is reguired");
+                     emailid.focus();
+                     return false;
+                 }
+            else {
+                alert("register successful");
+                create.focus();
+                return true;
+            }
+            
+            
+            
+        }
+    </script>
+       
+    
+    
+<body style="background: url(adi.jpg.jpg) " background-size: 60% 60%;>
+    <h1>F.C. BARCELONA  FAN  PAGE</h1>
+    <h2>FOR  CULERS  MEMBERSHIP  AND  OFFICIAL MERCHANDISE</h2>
+    <h3> LOG IN TO OUR PAGE </h3>
+    
+   
+    
+    
+    
+    <div class="login-page">
+    <div class="form">
+        <form class="register-form" method="post" action="adi.jsp" onsubmit="return validation()">
+        USERNAME: <input type="text" name=""  id="username" value="" /><br/>
+        PASSWORD: <input type="text" name="" id="password" value="" /><br/>
+        EMAILID: <input type="text" name="" id="emailid" value="" /><br/>
+        <button>create</button> 
+        <p class="message">Already Registered? <a href="#">Login</a>
+        </p>
+            </form>
+      
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+         USERNAME: <input type="text" name="username"><br/>
+         PASSWORD: <input type="password" name="password">
+            <br/>
+        <button>login</button>
+        <p class="message">Not Registered? <a href="#">Register</a></p> 
+        </form>
+         </div>
+         </div>
+     <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script>
+    
+    <script>
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity:"toggle"},"slow");
+    });
+    
+    </script>
+
+  
+        
+</body>
+</html>

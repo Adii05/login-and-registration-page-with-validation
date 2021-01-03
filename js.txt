@@ -1,0 +1,59 @@
+<script>
+       function validateform()
+        {
+            var username=document.myform.username.value;
+            var password=document.myform.password.value;
+            
+            if(username=="Aditya")
+                {
+                   if(password=="123456") 
+                       {
+                           alert("login successful");
+                       }
+                    else
+                    {
+                      alert("incorrect username or password");  
+                    }
+                }
+            else 
+                {
+                    alert(" incorrect username or password");
+                }
+        }
+        
+    
+        function validation()
+        {
+           
+            var username=document.getElementById("username");
+            var password=document.getElementById("password");
+            var emailid=document.getElementById("emailid");
+             if(username.value.length <= 0)
+                 {
+                     alert("Name is reguired");
+                     username.focus();
+                     return false;
+                 }
+            
+            if(password.value.length <= 0)
+                 {
+                     alert("password is reguired");
+                     password.focus();
+                     return false;
+                 }
+            if(emailid.value.length <= 0)
+                 {
+                     alert("emailid is reguired");
+                     emailid.focus();
+                     return false;
+                 }
+            else {
+                alert("register successful");
+                create.focus();
+                return true;
+            }
+            
+            
+            
+        }
+    </script>
